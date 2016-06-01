@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using Engine;
 namespace SuperAdventure
 {
@@ -18,12 +10,15 @@ namespace SuperAdventure
         {
             InitializeComponent();
 
-            player = new Player();
-            player.CurrentHitPoints = 10;
-            player.MaximumHitPoints = 10;
-            player.Gold = 20;
-            player.ExperiencePoints = 0;
-            player.Level = 1;
+            Location location = new Location(1, "home", "This is your home");
+
+
+
+
+
+            player = new Player(10, 10, 20, 0, 1);
+
+
 
             lblHitPoints.Text = player.CurrentHitPoints.ToString();
             lblGold.Text = player.Gold.ToString();
